@@ -1,0 +1,29 @@
+{
+  "name": "sygnal",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./css/base.css -o ./public/css/main.css --watch",
+    "dev": "nodemon app.js",
+    "start": "concurrently --kill-others \"npm run build\" \"npm run dev\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "body-parser": "^1.20.3",
+    "concurrently": "^9.0.1",
+    "express": "^4.21.0",
+    "mongoose": "^8.6.3",
+    "pug": "^3.0.3",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "tailwindcss": "^3.4.12"
+  },
+  "dependencies": {
+    "multer": "^1.4.5-lts.1"
+  }
+}
